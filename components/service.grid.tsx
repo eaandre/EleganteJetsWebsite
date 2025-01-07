@@ -1,50 +1,60 @@
-import Image from 'next/image'
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import Link from 'next/link'
-import { Plane, Users, Briefcase, Ambulance, Car } from 'lucide-react'
+import Image from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Plane, Users, Briefcase, Ambulance, Car } from "lucide-react";
 
 const services = [
   {
-    title: 'Private Jet Charter',
-    description: 'Tailored to your schedule and needs, our private jet charters provide an unmatched blend of luxury, privacy, and comfort. Our modern fleet ensures a seamless journey to your destination.',
-    image: '/placeholder.svg?height=400&width=600',
-    icon: Plane
+    title: "Private Jet Charter",
+    description:
+      "Tailored to your schedule and needs, our private jet charters provide an unmatched blend of luxury, privacy, and comfort. Our modern fleet ensures a seamless journey to your destination.",
+    image: "/images/services/jet-charter.jpg",
+    icon: Plane,
   },
   {
-    title: 'Group & Corporate Charters',
-    description: 'Redefine team travel with our group and corporate charter solutions. From executive retreats to large-scale events, we provide efficient, luxurious transportation for groups of all sizes.',
-    image: '/placeholder.svg?height=400&width=600',
-    icon: Users
+    title: "Group & Corporate Charters",
+    description:
+      "Redefine team travel with our group and corporate charter solutions. From executive retreats to large-scale events, we provide efficient, luxurious transportation for groups of all sizes.",
+    image: "/images/services/group-charter.jpg",
+    icon: Users,
   },
   {
-    title: 'Premium Concierge',
-    description: 'Beyond transportation, our premium concierge service elevates your experience with personalized itineraries, exclusive access to events, and round-the-clock support for your every need.',
-    image: '/placeholder.svg?height=400&width=600',
-    icon: Briefcase
+    title: "Premium Concierge",
+    description:
+      "Beyond transportation, our premium concierge service elevates your experience with personalized itineraries, exclusive access to events, and round-the-clock support for your every need.",
+    image: "/images/services/concierge.jpg",
+    icon: Briefcase,
   },
   {
-    title: 'Air Ambulance',
-    description: 'In emergencies, rely on our air ambulance service for swift and secure medical transportation. Equipped with cutting-edge medical facilities, we ensure the highest level of care for every patient.',
-    image: '/placeholder.svg?height=400&width=600',
-    icon: Ambulance
+    title: "Air Ambulance",
+    description:
+      "In emergencies, rely on our air ambulance service for swift and secure medical transportation. Equipped with cutting-edge medical facilities, we ensure the highest level of care for every patient.",
+    image: "/images/services/air-ambulance.jpg",
+    icon: Ambulance,
   },
   {
-    title: 'Luxury Car Rental',
-    description: 'Complete your travel experience with our premium car rental service. Choose from a curated selection of high-end vehicles to travel in style and comfort.',
-    image: '/placeholder.svg?height=400&width=600',
-    icon: Car
-  }
-]
+    title: "Luxury Car Rental",
+    description:
+      "Complete your travel experience with our premium car rental service. Choose from a curated selection of high-end vehicles to travel in style and comfort.",
+    image: "/images/services/luxury-car.jpg",
+    icon: Car,
+  },
+];
 
 export function ServicesGrid() {
   return (
     <section className="py-16 bg-background text-foreground">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-foreground dark:text-foreground">Our Services</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 text-foreground dark:text-foreground">
+          Our Services
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <Card key={service.title} className="overflow-hidden transition-transform duration-300 hover:scale-105 h-full">
+            <Card
+              key={service.title}
+              className="overflow-hidden transition-transform duration-300 hover:scale-105 h-full"
+            >
               <Image
                 src={service.image}
                 alt={service.title}
@@ -71,6 +81,5 @@ export function ServicesGrid() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

@@ -1,12 +1,12 @@
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from 'next/image'
 import Link from 'next/link'
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 
 const jets = [
   {
     name: "Light Jet",
-    image: "https://www.netjets.com/image-handler/source/fleet/phenom-300.jpg",
+    image: "/images/jets/light-jet.png",
     description: "Ideal for short trips, these jets combine efficiency with comfort.",
     specs: [
       "Capacity: 6-8 passengers",
@@ -17,7 +17,7 @@ const jets = [
   },
   {
     name: "Midsize Jet",
-    image: "https://www.netjets.com/image-handler/source/fleet/citation-latitude.jpg",
+    image: "/images/jets/midsize-jet.png",
     description: "A perfect choice for medium-length journeys, offering enhanced space and amenities.",
     specs: [
       "Capacity: 8-10 passengers",
@@ -28,7 +28,7 @@ const jets = [
   },
   {
     name: "Heavy Jet",
-    image: "https://www.netjets.com/image-handler/source/fleet/global-6000.jpg",
+    image: "/images/jets/heavy-jet.png",
     description: "Experience unparalleled luxury for long-haul travel with spacious cabins and state-of-the-art features.",
     specs: [
       "Capacity: 10-16 passengers",
@@ -42,7 +42,7 @@ const jets = [
 const vehicles = [
   {
     name: "Luxury Sedan",
-    image: "https://www.netjets.com/image-handler/source/ground/mercedes-s-class.jpg",
+    image: "/images/vehicles/luxury-sedan.jpg",
     description: "Travel in style with premium sedans featuring leather interiors, advanced sound systems, and climate control.",
     features: [
       "Leather interior",
@@ -53,7 +53,7 @@ const vehicles = [
   },
   {
     name:"Executive SUV",
-    image: "https://www.netjets.com/image-handler/source/ground/range-rover.jpg",
+    image: "/images/vehicles/executive-suv.jpg",
     description: "Perfect for groups, offering ample space and luxury with privacy partitions and premium entertainment systems.",
     features: [
       "Spacious seating for up to 7 passengers",
@@ -64,7 +64,7 @@ const vehicles = [
   },
   {
     name: "Sports Car",
-    image: "https://www.netjets.com/image-handler/source/ground/porsche-911.jpg",
+    image: "/images/vehicles/sports-car.jpg",
     description: "For the adventurous, our high-performance sports cars deliver speed, precision, and unmatched style.",
     features: [
       "High-performance engine",
