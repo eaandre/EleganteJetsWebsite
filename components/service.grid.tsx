@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Plane, Users, Briefcase, Ambulance, Car } from "lucide-react";
+import { Plane, Users, Ambulance, Car } from "lucide-react";
 
 const services = [
   {
