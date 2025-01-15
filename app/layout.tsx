@@ -7,8 +7,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { ScrollToTop } from "@/components/scroll-to-top"
 
 export const metadata: Metadata = {
-  title: 'Elegante Jets & Concierge | Luxury Private Aviation Services',
-  description: 'Experience unparalleled luxury and personalized service in the sky and on the ground with Elegante Jets & Concierge',
+  title: 'Elegante Jets | Luxury Private Jet Charter Services',
+  description: 'Elegante Jets offers personalized private jet services tailored to your unique travel needs. Elevate your flying experience.',
 }
 
 export default function RootLayout({
@@ -43,12 +43,13 @@ export default function RootLayout({
                       <li><Link href="/fleet" className="hover:text-primary transition-colors">Our Fleet</Link></li>
                       <li><Link href="/about" className="hover:text-primary transition-colors">Our Story</Link></li>
                       <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
+                      <li><Link href="https://www.instagram.com/elegante.jets.concierge/" className="hover:text-primary transition-colors">Instagram</Link></li>
                     </ul>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-4 text-primary">Contact</h3>
-                    <p>Nnamdi Azikiwe International Airport, Abuja, FCT, Nigeria</p>
-                    <p>Phone: +234 916 7116 192</p>
+                    <p>Abuja, FCT, Nigeria</p>
+                    <p>Phone: +234 902 4133 349</p>
                     <p>Email: elegantejetsconcierge@gmail.com</p>
                   </div>
                 </div>
@@ -64,4 +65,3 @@ export default function RootLayout({
     </html>
   )
 }
-

@@ -20,11 +20,11 @@ const services = [
     icon: Users,
   },
   {
-    title: "Premium Concierge",
+    title: "Luxury Car Rental",
     description:
-      "Beyond transportation, our premium concierge service elevates your experience with personalized itineraries, exclusive access to events, and round-the-clock support for your every need.",
-    image: "/images/services/concierge.jpg",
-    icon: Briefcase,
+      "Complete your travel experience with our premium car rental service. Choose from a curated selection of high-end vehicles to travel in style and comfort.",
+    image: "/images/services/luxury-car.jpg",
+    icon: Car,
   },
   {
     title: "Air Ambulance",
@@ -33,13 +33,7 @@ const services = [
     image: "/images/services/air-ambulance.jpg",
     icon: Ambulance,
   },
-  {
-    title: "Luxury Car Rental",
-    description:
-      "Complete your travel experience with our premium car rental service. Choose from a curated selection of high-end vehicles to travel in style and comfort.",
-    image: "/images/services/luxury-car.jpg",
-    icon: Car,
-  },
+
 ];
 
 export function ServicesGrid() {

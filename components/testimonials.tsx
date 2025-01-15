@@ -3,22 +3,22 @@ import Image from 'next/image'
 
 const testimonials = [
   {
-    name: "Hon. A",
-    company: "Tech Innovations Inc.",
-    content: "Elegante Jets exceeded all expectations! From start to finish, the service was impeccable.",
-    image: "/placeholder.svg?height=100&width=100"
+    name: "Private Client",
+    company: "Confidential",
+    content: "Elegante Jets provided an exceptional travel experience. Their attention to detail and personalized service made our journey seamless and enjoyable.",
+    image: "/images/testimonials/private_client1.jpg"
   },
   {
-    name: "General I.",
-    company: "Global Ventures LLC",
-    content: "Our go-to for corporate travel. Professional, flexible, and luxurious.",
-    image: "/placeholder.svg?height=100&width=100"
+    name: "Corporate Executive",
+    company: "Undisclosed Corporation",
+    content: "As a frequent traveler, I rely on Elegante Jets for their professionalism and flexibility. They consistently meet our corporate travel needs with excellence.",
+    image: "/images/testimonials/corporate_executive1.jpg"
   },
   {
-    name: "Dr. S.",
-    company: "Elite Enterprises",
-    content: "The epitome of luxury air travel. Every journey feels like a personalized experience.",
-    image: "/placeholder.svg?height=100&width=100"
+    name: "Business Owner",
+    company: "Private Enterprise",
+    content: "Choosing Elegante Jets was a game-changer for our business trips. Their luxurious service and commitment to client satisfaction are unparalleled.",
+    image: "/images/testimonials/business_owner1.jpg"
   }
 ]
 
@@ -32,13 +32,13 @@ export function Testimonials() {
             <Card key={index} className="bg-card hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <Image
+                  {/* <Image
                     src={testimonial.image}
                     alt={testimonial.name}
                     width={50}
                     height={50}
                     className="rounded-full mr-4"
-                  />
+                  /> */}
                   <div>
                     <p className="font-semibold text-foreground">{testimonial.name}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.company}</p>

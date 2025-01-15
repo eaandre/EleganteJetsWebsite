@@ -26,7 +26,7 @@ const legSchema = z.object({
 })
 
 const formSchema = z.object({
-  tripType: z.enum(["one-way", "round-trip", "multi-leg", "luxe-vehicle"]),
+  tripType: z.enum(["one way", "round trip", "multi leg", "car rental"]),
   legs: z.array(legSchema).min(1, { message: "At least one leg is required" }),
   preferredJetType: z.string().min(1, { message: "Preferred jet type is required" }),
   pickupLocation: z.string().min(2, { message: "Pickup location is required" }),
@@ -41,17 +41,17 @@ const formSchema = z.object({
 })
 
 const jetTypes = ["Light Jet", "Midsize Jet", "Heavy Jet"]
-const carTypes = ["Luxury Sedan", "SUV", "Sports Car", "Limousine", "Van"]
+const carTypes = ["Sedan", "SUV", "Sports Car", "Limousine", "Van"]
 
 export function EnhancedPricingWidget() {
-  const [tripType, setTripType] = useState<"one-way" | "round-trip" | "multi-leg" | "luxe-vehicle">("one-way")
+  const [tripType, setTripType] = useState<"one way" | "round trip" | "multi leg" | "car rental">("one way")
   const [showContactFields, setShowContactFields] = useState(false)
   const [showThankYouMessage, setShowThankYouMessage] = useState(false)
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      tripType: "one-way",
+      tripType: "one way",
       legs: [{ from: "", to: "", date: new Date() }],
       preferredJetType: "",
       pickupLocation: "",
@@ -100,13 +100,13 @@ export function EnhancedPricingWidget() {
 
   function getRequiredFields(type: string) {
     switch (type) {
-      case 'one-way':
+      case 'one way':
         return ['legs.0.from', 'legs.0.to', 'legs.0.date', 'preferredJetType']
-      case 'round-trip':
+      case 'round trip':
         return ['legs.0.from', 'legs.0.to', 'legs.0.date', 'legs.1.date', 'preferredJetType']
-      case 'multi-leg':
+      case 'multi leg':
         return ['legs', 'preferredJetType']
-      case 'luxe-vehicle':
+      case 'car rental':
         return ['pickupLocation', 'dropoffLocation', 'pickupDateTime', 'returnDateTime', 'preferredCarType']
       default:
         return []
@@ -126,50 +126,50 @@ export function EnhancedPricingWidget() {
   return (
     <Card className="w-full max-w-4xl mx-auto bg-card text-card-foreground">
       <CardHeader>
-        <CardTitle className="text-3xl font-bold text-card-foreground">Get Your Personalized Quote</CardTitle>
-        <CardDescription className="text-card-foreground">Tailor your premium travel experience</CardDescription>
+        <CardTitle className="text-3xl font-bold text-card-foreground">Request Your Personalized Travel Quote</CardTitle>
+        <CardDescription className="text-card-foreground">Experience seamless luxury tailored to your needs. Select your journey type and preferences, and we’ll provide a personalized quote for your exclusive travel experience.</CardDescription>
       </CardHeader>
       <CardContent>
-        <Tabs defaultValue="one-way" onValueChange={(value) => setTripType(value as "one-way" | "round-trip" | "multi-leg" | "luxe-vehicle")}>
+        <Tabs defaultValue="one way" onValueChange={(value) => setTripType(value as "one way" | "round trip" | "multi leg" | "car rental")}>
           <TabsList className="grid w-full grid-cols-4 bg-muted border border-border rounded-t-md">
             <TabsTrigger 
-              value="one-way" 
+              value="one way" 
               className="text-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-tl-md"
             >
-              One-Way
+              One Way
             </TabsTrigger>
             <TabsTrigger 
-              value="round-trip" 
+              value="round trip" 
               className="text-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
             >
-              Round-Trip
+              Round Trip
             </TabsTrigger>
             <TabsTrigger 
-              value="multi-leg" 
+              value="multi leg" 
               className="text-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
             >
-              Multi-Leg
+              Multi Leg
             </TabsTrigger>
             <TabsTrigger 
-              value="luxe-vehicle" 
+              value="car rental" 
               className="text-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-tr-md"
             >
-              Luxe Vehicle
+              Car Rental
             </TabsTrigger>
           </TabsList>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 mt-8">
-              <TabsContent value="one-way">
+              <TabsContent value="one way">
                 <OneWayTripForm form={form} />
               </TabsContent>
-              <TabsContent value="round-trip">
+              <TabsContent value="round trip">
                 <RoundTripForm form={form} />
               </TabsContent>
-              <TabsContent value="multi-leg">
+              <TabsContent value="multi leg">
                 <MultiLegTripForm form={form} fields={fields} append={append} remove={remove} />
               </TabsContent>
-              <TabsContent value="luxe-vehicle">
-                <LuxeVehicleRentalForm form={form} />
+              <TabsContent value="car rental">
+                <CarRentalForm form={form} />
               </TabsContent>
               {showContactFields && <ContactFields form={form} />}
               <div className="flex justify-end">
@@ -180,9 +180,9 @@ export function EnhancedPricingWidget() {
                         type="submit" 
                         className="bg-primary text-primary-foreground hover:bg-primary/80 transition-colors font-semibold py-2 px-4 rounded-md shadow-md"
                       >
-                        {tripType === "luxe-vehicle" ?
-                          <><Car className="mr-2 h-4 w-4" /> Get Luxe Vehicle Quote</> :
-                          <><Plane className="mr-2 h-4 w-4" /> Get Flight Quote</>
+                        {tripType === "car rental" ?
+                          <><Car className="mr-2 h-4 w-4" /> Request My Quote</> :
+                          <><Plane className="mr-2 h-4 w-4" /> Request My Quote</>
                         }
                       </Button>
                     </TooltipTrigger>
@@ -644,7 +644,7 @@ function MultiLegTripForm({ form, fields, append, remove }: { form: ReturnType<t
   )
 }
 
-function LuxeVehicleRentalForm({ form }: { form: ReturnType<typeof useForm<z.infer<typeof formSchema>>> }) {
+function CarRentalForm({ form }: { form: ReturnType<typeof useForm<z.infer<typeof formSchema>>> }) {
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

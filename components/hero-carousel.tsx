@@ -73,10 +73,10 @@ export function HeroCarousel() {
           className="text-center max-w-4xl px-4"
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-            Luxury in the Sky, Precision on the Ground
+            Seamless Luxury, Tailored To You.
           </h1>
           <p className="text-xl md:text-2xl text-white mb-8 drop-shadow-md">
-            Experience the pinnacle of bespoke air travel and concierge services, where every journey is tailored to perfection.
+            Experience the pinnacle of bespoke air travel and concierge service.
           </p>
           <div className="space-x-4">
             <Link href="/contact">

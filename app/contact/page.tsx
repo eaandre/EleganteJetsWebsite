@@ -37,9 +37,9 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold mb-4">Our Location</h2>
               <GoogleMap />
               <div className="mt-4">
-                <p><strong>Address:</strong> Nnamdi Azikiwe International Airport, Abuja, FCT, Nigeria</p>
-                <p><strong>Phone:</strong> +234 916 7116 192</p>
-                <p><strong>Email:</strong> info@elegantejets.com</p>
+                <p><strong>Address:</strong> Abuja, FCT, Nigeria</p>
+                <p><strong>Phone:</strong> +234 902 4133 349</p>
+                <p><strong>Email:</strong> elegantejetsconcierge@gmail.com</p>
               </div>
             </div>
           </div>

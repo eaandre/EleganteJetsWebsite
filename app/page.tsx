@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Diamond, Plane, Car } from "lucide-react";
 import { ErrorBoundary } from "react-error-boundary";
 import { ErrorFallback } from "@/components/error-fallback";
+import { EnhancedPricingWidget } from "@/components/enhanced-pricing-widget";
 
 const HeroCarousel = dynamic(
   () => import("@/components/hero-carousel").then((mod) => mod.HeroCarousel),
@@ -34,24 +35,10 @@ export default function Home() {
         <HeroCarousel />
       </ErrorBoundary>
 
-      {/* About Us Section */}
+      {/* Replace About Us Section with EnhancedPricingWidget */}
       <section className="py-16 bg-background text-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-foreground">
-            Redefining Luxury Travel
-          </h2>
-          <p className="mb-8 text-lg text-foreground">
-            With years of expertise in luxury travel and a relentless focus on
-            safety and personalization, Elegante Jets & Concierge stands as
-            Nigeria&apos;s premier private aviation provider. From private jet
-            charters to exclusive concierge services, we redefine what it means
-            to travel in style.
-          </p>
-          <Link href="/about">
-            <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors transform hover:scale-105 duration-200">
-              Learn More About Us
-            </Button>
-          </Link>
+        <div className="container mx-auto px-4">
+          <EnhancedPricingWidget />
         </div>
       </section>
 
@@ -141,14 +128,13 @@ export default function Home() {
           </p>
           <div className="mb-8">
             <p>
-              <strong>Address:</strong> Nnamdi Azikiwe International Airport,
-              Abuja, FCT, Nigeria
+              <strong>Address:</strong> Abuja, FCT, Nigeria
             </p>
             <p>
-              <strong>Phone:</strong> +234 916 7116 192
+              <strong>Phone:</strong> +234 902 4133 349
             </p>
             <p>
-              <strong>Email:</strong> info@elegantejets.com
+              <strong>Email:</strong> elegantejetsconcierge@gmail.com
             </p>
           </div>
           <Link href="/contact">
