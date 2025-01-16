@@ -54,12 +54,12 @@ export function Header() {
           <ThemeToggle />
           {isMenuOpen && (
             <div className="absolute right-0 top-full mt-2 w-48 bg-background text-foreground border border-border rounded-md shadow-lg py-1 z-50">
-              <Link href="/" className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10">Home</Link>
-              <Link href="/services" className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10">Services</Link>
-              <Link href="/fleet" className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10">Fleet</Link>
-              <Link href="/about" className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10">Our Story</Link>
-              <Link href="/contact" className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10">Contact</Link>
-              <Link href="/quote" className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10">Get a Quote</Link>
+              <Link href="/" className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10" onClick={() => setIsMenuOpen(false)}>Home</Link>
+              <Link href="/services" className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10" onClick={() => setIsMenuOpen(false)}>Services</Link>
+              <Link href="/fleet" className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10" onClick={() => setIsMenuOpen(false)}>Fleet</Link>
+              <Link href="/about" className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10" onClick={() => setIsMenuOpen(false)}>Our Story</Link>
+              <Link href="/contact" className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+              <Link href="/quote" className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10" onClick={() => setIsMenuOpen(false)}>Get a Quote</Link>
             </div>
           )}
         </nav>

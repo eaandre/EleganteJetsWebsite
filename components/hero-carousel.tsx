@@ -17,7 +17,7 @@ const images = [
     alt: "Luxurious interior of an Elegante Jets private aircraft"
   },
   {
-    src: "/IMG_7100.JPG ",
+    src: "/IMG_7100.JPG",
     alt: "Elegante Jets business aircraft soaring over the sea at sunset"
   }
 ]
@@ -78,7 +78,7 @@ export function HeroCarousel() {
           <p className="text-xl md:text-2xl text-white mb-8 drop-shadow-md">
             Experience the pinnacle of bespoke air travel and concierge service.
           </p>
-          <div className="space-x-4">
+          <div className="space-y-4 md:space-x-4">
             <Link href="/contact">
               <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors transform hover:scale-105 duration-200">
                 Contact Us

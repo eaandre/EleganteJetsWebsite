@@ -7,34 +7,34 @@ const jets = [
   {
     name: "Light Jet",
     image: "/images/jets/light-jet.png",
-    description: "Ideal for short trips, these jets combine efficiency with comfort.",
+    description: "Ideal for short trips, these jets combine efficiency with comfort for up to 6-8 passengers.",
     specs: [
       "Capacity: 6-8 passengers",
-      "Range: Up to 1,500 nautical miles",
+      "Range: Up to 2,500 nautical miles",
       "Speed: 400-450 knots",
-      "Luggage: 50-60 cubic feet"
+      "Luggage: 6-7 pieces of luggage"
     ]
   },
   {
     name: "Midsize Jet",
     image: "/images/jets/midsize-jet.png",
-    description: "A perfect choice for medium-length journeys, offering enhanced space and amenities.",
+    description: "A perfect choice for medium-length journeys, offering enhanced space and amenities for 6-9 passengers.",
     specs: [
-      "Capacity: 8-10 passengers",
+      "Capacity: 6-9 passengers",
       "Range: Up to 3,000 nautical miles",
       "Speed: 430-480 knots",
-      "Luggage: 80-90 cubic feet"
+      "Luggage: 7-8 pieces of luggage"
     ]
   },
   {
     name: "Heavy Jet",
     image: "/images/jets/heavy-jet.png",
-    description: "Experience unparalleled luxury for long-haul travel with spacious cabins and state-of-the-art features.",
+    description: "Experience unparalleled luxury for long-haul travel with spacious cabins, top-tier amenities, and room for up to 16 passengers.",
     specs: [
       "Capacity: 10-16 passengers",
       "Range: Up to 6,000 nautical miles",
       "Speed: 470-550 knots",
-      "Luggage: 150-195 cubic feet"
+      "Luggage: 11-20 pieces of luggage"
     ]
   }
 ]
@@ -56,7 +56,7 @@ const vehicles = [
     image: "/images/vehicles/executive-suv.jpg",
     description: "Perfect for groups, offering ample space and luxury with privacy partitions and premium entertainment systems.",
     features: [
-      "Spacious seating for up to 7 passengers",
+      "Seating for up to 7 passengers",
       "Ample luggage space",
       "Premium entertainment system",
       "Privacy partition"
@@ -81,7 +81,7 @@ export default function FleetPage() {
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4 text-primary-foreground">Discover Elegance in Motion: Our Premier Fleet</h1>
-          <p className="text-lg mb-8 text-primary-foreground">From light jets to luxury sedans, our fleet is designed to meet your every need.</p>
+          <p className="text-lg mb-8 text-primary-foreground">From light jets to luxury sedans, our fleet is designed to meet your every need with top-tier comfort and service.</p>
         </div>
       </section>
 
@@ -157,4 +157,3 @@ export default function FleetPage() {
     </div>
   )
 }
-
