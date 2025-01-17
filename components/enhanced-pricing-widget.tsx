@@ -5,7 +5,6 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm, useFieldArray } from "react-hook-form"
 import * as z from "zod"
 import format from "date-fns/format"
-import { parseISO } from "date-fns"
 import { CalendarIcon, Plane, Car, Plus, Trash2 } from 'lucide-react'
 
 import { cn } from "@/lib/utils"
@@ -40,7 +39,6 @@ const formSchema = z.object({
   phoneNumber: z.string().min(10, { message: "Invalid phone number" }).regex(/^\d+$/, { message: "Phone number must be numeric" }),
 })
 
-const jetTypes = ["Light Jet", "Midsize Jet", "Heavy Jet"]
 const carTypes = ["Sedan", "SUV", "Van", "Super Car", "Limousine"]
 
 export function EnhancedPricingWidget() {
