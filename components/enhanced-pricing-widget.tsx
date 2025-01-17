@@ -338,7 +338,7 @@ function JetCharterForm({
 
       <Button
         type="button"
-        onClick={() => append({ from: "", to: "", date: new Date(), returnDate: new Date() })}
+        onClick={() => append({ from: "", to: "", date: new Date(), returnDate: undefined })}
         className="flex items-center"
       >
         <Plus className="mr-2 h-4 w-4" /> Add Another Leg
