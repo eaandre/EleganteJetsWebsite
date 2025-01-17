@@ -52,7 +52,7 @@ export function EnhancedPricingWidget() {
 
   const getDefaultValues = () => ({
     tripType,
-    legs: [{ from: "", to: "", date: new Date(), returnDate: null }],
+    legs: [{ from: "", to: "", date: new Date(), returnDate: undefined }],
     pickupLocation: "",
     dropoffLocation: "",
     pickupDateTime: new Date(),
@@ -186,8 +186,8 @@ function JetCharterForm({
   remove,
 }: {
   form: ReturnType<typeof useForm<z.infer<typeof formSchema>>>;
-  fields: { id: string; from: string; to: string; date: Date | null; returnDate: Date | null }[];
-  append: (value: { from: string; to: string; date: Date; returnDate: Date | null }) => void;
+  fields: { id: string; from: string; to: string; date: Date | undefined; returnDate: Date | undefined }[];
+  append: (value: { from: string; to: string; date: Date; returnDate: Date | undefined }) => void;
   remove: (index: number) => void;
 }) {
   const [showReturnFields, setShowReturnFields] = useState<{ [key: string]: boolean }>({});
@@ -338,7 +338,7 @@ function JetCharterForm({
 
       <Button
         type="button"
-        onClick={() => append({ from: "", to: "", date: new Date(), returnDate: null })}
+        onClick={() => append({ from: "", to: "", date: new Date(), returnDate: undefined })}
         className="flex items-center"
       >
         <Plus className="mr-2 h-4 w-4" /> Add Another Leg
