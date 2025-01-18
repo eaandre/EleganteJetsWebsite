@@ -1,5 +1,7 @@
-import { Button } from "@/components/ui/button"
-import Image from 'next/image';
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Page() {
   return (
     <div className="bg-background text-foreground">
@@ -23,9 +25,11 @@ export default function Page() {
               <p className="mb-4">
                 Over the years, we&apos;ve built a reputation for unparalleled service, safety, and attention to detail. Our fleet has grown, our services have expanded, but our commitment to excellence remains unwavering.
               </p>
-              <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors">
-                Explore Our Fleet
-              </Button>
+              <Link href="/fleet" passHref>
+                <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors">
+                  Explore Our Fleet
+                </Button>
+              </Link>
             </div>
             <div className="relative h-64 md:h-[400px]">
               <Image
@@ -67,11 +71,13 @@ export default function Page() {
           <p className="mb-8 text-lg">
             Join us for a journey where luxury meets precision, and every flight is an unforgettable experience.
           </p>
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/80 transition-colors">
-            Get Your Personalized Quote
-          </Button>
+          <Link href="/quote" passHref>
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/80 transition-colors">
+              Get Your Personalized Quote
+            </Button>
+          </Link>
         </div>
       </section>
     </div>
-  )
+  );
 }
