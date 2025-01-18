@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-
+import Image from 'next/image';
 export default function Page() {
   return (
     <div className="bg-background text-foreground">
@@ -7,7 +7,7 @@ export default function Page() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">Our Story</h1>
           <p className="text-lg mb-8">
-            Discover the journey that led us to become Nigeria's premier private aviation provider.
+            Discover the journey that led us to become Nigeria&apos;s premier private aviation provider.
           </p>
         </div>
       </section>
@@ -21,16 +21,19 @@ export default function Page() {
                 Founded by a team of seasoned aviation and luxury service professionals, Elegante Jets & Concierge emerged from a vision to revolutionize private aviation in Nigeria. Our founders, with decades of experience in luxury travel and aviation, saw an opportunity to bring world-class private jet services to discerning clients in Africa.
               </p>
               <p className="mb-4">
-                Over the years, we've built a reputation for unparalleled service, safety, and attention to detail. Our fleet has grown, our services have expanded, but our commitment to excellence remains unwavering.
+                Over the years, we&apos;ve built a reputation for unparalleled service, safety, and attention to detail. Our fleet has grown, our services have expanded, but our commitment to excellence remains unwavering.
               </p>
               <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors">
                 Explore Our Fleet
               </Button>
             </div>
             <div className="relative h-64 md:h-[400px]">
-              <img
+              <Image
                 src="/IMG_7439.jpg"
                 alt="Luxury Jet in flight"
+                layout="responsive" 
+                width={800} 
+                height={600} 
                 className="object-cover rounded-lg w-full h-full"
               />
             </div>
