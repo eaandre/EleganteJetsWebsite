@@ -470,7 +470,7 @@ function CarRentalForm({
                   </FormControl>
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0">
-                  <Calendar selected={field.value} onDateChange={field.onChange} initialFocus />
+                <Calendar selected={field.value} onDateSelected={field.onChange} initialFocus />
                 </PopoverContent>
               </Popover>
               <FormMessage />
