@@ -43,7 +43,7 @@ const formSchema = z.object({
     .regex(/^\d+$/, { message: "Phone number must be numeric" }),
 });
 
-const carTypes = ["Sedan", "SUV", "Van", "Super Car", "Limousine"];
+const carTypes = ["Sedan", "SUV", "Van", "Super Car", "Truck"];
 //const jetTypes = ["Light Jet", "Mid Jet", "Heavy Jet"];
 
 export function EnhancedPricingWidget() {
@@ -441,7 +441,12 @@ function CarRentalForm({
                   </FormControl>
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0">
-                  <Calendar selected={field.value} onDateChange={field.onChange} initialFocus />
+                  <Calendar 
+                    mode="single"
+                    selected={field.value} 
+                    onSelect={field.onChange} 
+                    initialFocus 
+                  />
                 </PopoverContent>
               </Popover>
               <FormMessage />
@@ -470,7 +475,12 @@ function CarRentalForm({
                   </FormControl>
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0">
-                <Calendar selected={field.value} onDateSelected={field.onChange} initialFocus />
+                  <Calendar 
+                    mode="single"
+                    selected={field.value} 
+                    onSelect={field.onChange} 
+                    initialFocus 
+                  />
                 </PopoverContent>
               </Popover>
               <FormMessage />
