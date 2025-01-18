@@ -109,7 +109,7 @@ export function EnhancedPricingWidget() {
           Request Your Personalized Travel Quote
         </CardTitle>
         <CardDescription className="text-card-foreground">
-          Experience seamless luxury tailored to your needs. Select your journey type and preferences, and we&aposfll provide a personalized quote for your exclusive travel experience.
+          Experience seamless luxury tailored to your needs. Select your journey type and preferences, and we&apos;ll provide a personalized quote for your exclusive travel experience.
         </CardDescription>
       </CardHeader>
       <CardContent>

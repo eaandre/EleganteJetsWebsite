@@ -63,7 +63,7 @@ const vehicles = [
     ]
   },
   {
-    name: "Sports Car",
+    name: "Super Car",
     image: "/images/vehicles/sports-car.jpg",
     description: "For the adventurous, our high-performance sports cars deliver speed, precision, and unmatched style.",
     features: [

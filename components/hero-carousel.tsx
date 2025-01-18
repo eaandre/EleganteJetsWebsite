@@ -76,7 +76,7 @@ export function HeroCarousel() {
             Seamless Luxury, Tailored To You.
           </h1>
           <p className="text-xl md:text-2xl text-white mb-8 drop-shadow-md">
-            Experience the pinnacle of bespoke air travel and concierge service.
+            The pinnacle of bespoke air travel and concierge service.
           </p>
           <div className="space-y-4 md:space-x-4">
             <Link href="/contact">
@@ -105,18 +105,18 @@ export function HeroCarousel() {
         ))}
       </div>
       <button
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-black/50 transition-colors z-20"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/30 text-white p-1 rounded-full hover:bg-black/50 transition-colors z-20"
         onClick={goToPrevious}
         aria-label="Previous slide"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={20} />
       </button>
       <button
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-black/50 transition-colors z-20"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/30 text-white p-1 rounded-full hover:bg-black/50 transition-colors z-20"
         onClick={goToNext}
         aria-label="Next slide"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={20} />
       </button>
     </section>
   )
