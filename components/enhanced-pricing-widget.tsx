@@ -185,10 +185,16 @@ function JetCharterForm({
   append,
   remove,
 }: {
-  form: ReturnType<typeof useForm<z.infer<typeof formSchema>>>;
-  fields: { id: string; from: string; to: string; date: Date | undefined; returnDate: Date | undefined }[]; 
-  append: (value: { from: string; to: string; date: Date; returnDate: Date | undefined }) => void; 
-  remove: (index: number) => void; 
+  form: ReturnType<typeof useForm<z.infer<typeof formSchema>>>; 
+  fields: { 
+    id: string; 
+    from: string; 
+    to: string; 
+    date: Date | undefined; 
+    returnDate?: Date | undefined; // Marked as optional
+  }[]; 
+  append: (value: { from: string; to: string; date: Date; returnDate?: Date | undefined }) => void;
+  remove: (index: number) => void;
 }) {
   const [showReturnFields, setShowReturnFields] = useState<{ [key: string]: boolean }>({});
 
@@ -201,7 +207,7 @@ function JetCharterForm({
   const toggleReturn = (fieldId: string) => {
     setShowReturnFields(prev => ({
       ...prev,
-      [fieldId]: !prev[fieldId],
+      [fieldId]: !prev[fieldId]
     }));
   };
 
