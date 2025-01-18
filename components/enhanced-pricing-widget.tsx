@@ -186,12 +186,12 @@ function JetCharterForm({
   remove,
 }: {
   form: ReturnType<typeof useForm<z.infer<typeof formSchema>>>;
-  fields: { id: string; from: string; to: string; date: Date | undefined; returnDate: Date | undefined }[];
-  append: (value: { from: string; to: string; date: Date; returnDate: Date | undefined }) => void;
-  remove: (index: number) => void;
+  fields: { id: string; from: string; to: string; date: Date | undefined; returnDate: Date | undefined }[]; 
+  append: (value: { from: string; to: string; date: Date; returnDate: Date | undefined }) => void; 
+  remove: (index: number) => void; 
 }) {
   const [showReturnFields, setShowReturnFields] = useState<{ [key: string]: boolean }>({});
-  
+
   // Track the form fields for locations and dates
   const { watch } = form;
   const fromLocations = watch("legs").map((leg) => leg.from);
@@ -201,7 +201,7 @@ function JetCharterForm({
   const toggleReturn = (fieldId: string) => {
     setShowReturnFields(prev => ({
       ...prev,
-      [fieldId]: !prev[fieldId]
+      [fieldId]: !prev[fieldId],
     }));
   };
 
@@ -360,7 +360,6 @@ function JetCharterForm({
           </FormItem>
         )}
       />
-
 
       {datesFilled && <ContactFields form={form} />}
     </div>
