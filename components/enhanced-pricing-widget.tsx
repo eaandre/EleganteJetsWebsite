@@ -94,14 +94,21 @@ export function EnhancedPricingWidget() {
     return () => subscription.unsubscribe();
   }, [form]);
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
     setShowThankYouMessage(true);
-    form.reset();
-    localStorage.removeItem("formData");
-    setTimeout(() => {
-      setShowThankYouMessage(false);
-    }, 5000);
+    
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbzjLTUPxDvM0_UyaUOud5UQ-Diekqxq8LGW5LVCypXq5Djx3fW8eDT_CvPU93Sw2iqK/exec", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   }
 
   return (

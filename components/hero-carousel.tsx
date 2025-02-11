@@ -52,7 +52,7 @@ export function HeroCarousel() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0 }}
           className="absolute inset-0"
         >
           <Image
@@ -78,14 +78,18 @@ export function HeroCarousel() {
           <p className="text-xl md:text-2xl text-white mb-8 drop-shadow-md">
             The pinnacle of bespoke air travel and concierge service.
           </p>
-          <div className="space-y-4 md:space-x-4">
-            <Link href="/contact">
-              <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors transform hover:scale-105 duration-200">
+          <div className="flex flex-col items-center md:flex-row md:justify-center space-y-4 md:space-y-0 md:space-x-4">
+            <a
+              href="https://wa.me/2349024133349"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors transform hover:scale-105 duration-200 w-full md:w-auto">
                 Contact Us
               </Button>
-            </Link>
+            </a>
             <Link href="/quote">
-              <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors transform hover:scale-105 duration-200">
+              <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors transform hover:scale-105 duration-200 w-full md:w-auto">
                 Get Your Personalized Quote
               </Button>
             </Link>
@@ -96,9 +100,7 @@ export function HeroCarousel() {
         {images.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              currentImage === index ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
-            }`}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${currentImage === index ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'}`}
             onClick={() => goToSlide(index)}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -109,16 +111,15 @@ export function HeroCarousel() {
         onClick={goToPrevious}
         aria-label="Previous slide"
       >
-        <ChevronLeft size={20} />
+        <ChevronLeft size={10} />
       </button>
       <button
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/30 text-white p-1 rounded-full hover:bg-black/50 transition-colors z-20"
         onClick={goToNext}
         aria-label="Next slide"
       >
-        <ChevronRight size={20} />
+        <ChevronRight size={10} />
       </button>
     </section>
   )
 }
-
