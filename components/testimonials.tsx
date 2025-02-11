@@ -42,9 +42,9 @@ export function Testimonials() {
             </Card>
           ))}
         </div>
-        {/* Optional: Add a CTA for immediate booking */}
+        {/* Updated CTA to WhatsApp link */}
         <div className="text-center mt-8">
-          <a href="/booking" className="bg-primary text-white py-3 px-6 rounded-full hover:bg-primary-dark transition-colors duration-300">
+          <a href="https://wa.me/2349024133349" target="_blank" rel="noopener noreferrer" className="bg-primary text-white py-3 px-6 rounded-full hover:bg-primary-dark transition-colors duration-300">
             Book Your Exclusive Experience
           </a>
         </div>

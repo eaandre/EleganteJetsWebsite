@@ -99,7 +99,7 @@ export default function Home() {
             <p><strong>Phone:</strong> +234 902 4133 349</p>
             <p><strong>Email:</strong> elegantejetsconcierge@gmail.com</p>
           </div>
-          <Link href="/contact">
+          <Link href="https://wa.me/2349024133349">
             <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors transform hover:scale-105 duration-200">
               Get In Touch
             </Button>
